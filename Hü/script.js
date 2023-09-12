@@ -10,6 +10,7 @@ function addElement() {
         const li = document.createElement("li");
         li.textContent = text;
         ul.appendChild(li);
+//test
 
        
         textInput.value = "";
