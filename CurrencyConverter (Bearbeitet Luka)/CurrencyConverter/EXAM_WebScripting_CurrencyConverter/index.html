@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="myStyle.css">
+  <script src="getdata.js"></script>
+
+  <!-- CSS-Regeln für Aufgabe 4f -->
+  <style>
+    .list-group-item {
+      border: 1px solid #A5ACB2;
+    }
+  </style>
+
+</head>
+
+
+
+<body>
+  <div id="container">
+    <div class="row">
+      <div class="col-sm"></div>
+      <div class="col-sm-9">
+        <h3 style="text-align: center;">Currency Converter</h3>
+      </div>
+      <div class="col-sm"></div>
+    </div>
+
+    <!--Input-->
+    <div class="row">
+      <div class="col-sm"></div>
+      <div class="col-sm-9">
+        <div class="input-group">
+          <input type="number" class="form-control" placeholder="Enter Euro amount" onkeyup="showResult(this.value)">
+        </div>
+      </div>
+      <div class="col-sm"></div>
+    </div>
+
+    <!--Output-->
+    <div class="row">
+      <div class="col-sm"></div>
+      <div class="col-sm-9">
+        <div id="ausgabe-bereich"></div>
+      </div>
+      <div class="col-sm"></div>
+    </div>
+  </div>
+
+
+  <script>
+    function selectItem(item) {
+      const ausgabeBereich = document.getElementById("ausgabe-bereich");
+      const resultList = document.createElement("ul");
+      resultList.classList.add("list-group", "mt-3");
+
+      const listItem = document.createElement("li");
+      listItem.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center", "greyline");
+      listItem.innerHTML = item.innerHTML;
+      resultList.appendChild(listItem);
+
+      ausgabeBereich.innerHTML = "";
+      ausgabeBereich.appendChild(resultList);
+    }
+  </script>
+  
+</body>
+</html>
