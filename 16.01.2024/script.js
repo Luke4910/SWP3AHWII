@@ -47,11 +47,6 @@ class Person {
         this.#geschlecht = geschlechtPar;
     }
 
-    alert() {
-        addEventListener('click', () => {
-            this.alert('click');
-        });
-    }
 
     get bmi() {
         const nmbr = this.#gewicht / (this.#groesse * this.#groesse);
@@ -67,7 +62,7 @@ class Person {
 
 function berechnenUndAusgeben() {
     const name = document.getElementById('name').value;
-    const gewicht = parseFloat(document.getElementById('gewicht').value);
+    const gewicht = parseFloat(document.getElementById('gewichtt').value);
     const groesse = parseFloat(document.getElementById('groesse').value);
     const geschlecht = document.getElementById('geschlecht').value;
 
@@ -79,3 +74,4 @@ function berechnenUndAusgeben() {
         alert(`Fehler: ${error.message}`);
     }
 }
+
