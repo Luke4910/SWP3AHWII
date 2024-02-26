@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+body {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    background: linear-gradient(to bottom right, #ff9eb5, #9fb1ff, #ffffff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    box-shadow: 0 0 20px rgba(51, 45, 45, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden; /* Hide content during the animation */
+  }
+  
+  /* Header styles */
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: fadeInHeader 4s;
+  }
+  
+  /* Watermark styles */
+  .watermark {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+  }
+  
+  /* Opening animation */
+  body:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #ff9eb5, #9fb1ff, #ffffff);
+    transform-origin: 50% 50%;
+    transform: scaleX(0); /* Initial scale is set to 0 */
+    transition: transform 1s ease-in-out;
+    z-index: 9999; /* Ensure it's on top of other elements */
+  }
+  
+  body.loaded:before {
+    transform: scaleX(1); /* Scale to full width after the animation */
+  }
+  
+  @keyframes fadeInHeader {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+label,
+button,
+select,
+input[type="number"],
+input[type="text"] {
+  font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+input[type="number"],
+select,
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 10px 0;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="number"]:focus,
+select:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: #8fb0a9;
+  box-shadow: 0 0 5px #8fb0a9;
+}
+
+input[type="number"]::placeholder,
+select::placeholder,
+input[type="text"]::placeholder {
+  color: #999;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #8fb0a9;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #6b8e83;
+  transform: scale(1.05);
+}
+
+button:last-of-type {
+  margin-top: 20px;
+}
+
+button[type="reset"] {
+  background-color: #e07a5f;
+}
+
+button[type="reset"]:hover {
+  background-color: #c65c3d;
+}
+
+span,
+#fahrpreis,
+#guthaben,
+#einnahmen,
+h3 {
+  font-weight: bold;
+}
+
+pre,
+#einwerfenBetrag,
+#anzahlPersonen,
+#ticketAusgabe {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: fadeIn 5s;
+}
+
+@media (max-width: 768px) {
+  /* Styles for smaller screens */
+  /* You can add responsive styles here */
+}
+button {
+    padding: 10px 20px;
+    background-color: #8fb0a9;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+  } 
+  
+  button:hover {
+    background-color: #6b8e83;
+    transform: scale(1.05);
+  }
+  
+  button[type="reset"] {
+    background-color: #e07a5f;
+  }
+  
+  button[type="reset"]:hover {
+    background-color: #c65c3d;
+  }
+  
+
+  button:active {
+    transform: scale(0.95);
+  }
