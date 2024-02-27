@@ -13,10 +13,10 @@ body {
     box-shadow: 0 0 20px rgba(51, 45, 45, 0.1);
     transition: box-shadow 0.3s ease-in-out;
     position: relative;
-    overflow: hidden; /* Hide content during the animation */
+    overflow: hidden; 
   }
   
-  /* Header styles */
+
   header {
     width: 100%;
     position: fixed;
@@ -49,13 +49,13 @@ body {
     height: 100vh;
     background: linear-gradient(to bottom right, #ff9eb5, #9fb1ff, #ffffff);
     transform-origin: 50% 50%;
-    transform: scaleX(0); /* Initial scale is set to 0 */
+    transform: scaleX(0); 
     transition: transform 1s ease-in-out;
-    z-index: 9999; /* Ensure it's on top of other elements */
+    z-index: 9999; 
   }
   
   body.loaded:before {
-    transform: scaleX(1); /* Scale to full width after the animation */
+    transform: scaleX(1); 
   }
   
   @keyframes fadeInHeader {
@@ -126,11 +126,11 @@ button:last-of-type {
 }
 
 button[type="reset"] {
-  background-color: #e07a5f;
+  background-color: #48289a;
 }
 
 button[type="reset"]:hover {
-  background-color: #c65c3d;
+  background-color: #401c98;
 }
 
 span,
@@ -169,12 +169,11 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* Styles for smaller screens */
-  /* You can add responsive styles here */
+
 }
 button {
     padding: 10px 20px;
-    background-color: #8fb0a9;
+    background-color: #0e6aa7;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -183,16 +182,16 @@ button {
   } 
   
   button:hover {
-    background-color: #6b8e83;
+    background-color: #19958f;
     transform: scale(1.05);
   }
   
   button[type="reset"] {
-    background-color: #e07a5f;
+    background-color: #4b279f;
   }
   
   button[type="reset"]:hover {
-    background-color: #c65c3d;
+    background-color: #491ed6;
   }
   
 
